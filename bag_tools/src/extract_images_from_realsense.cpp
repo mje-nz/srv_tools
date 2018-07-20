@@ -70,7 +70,6 @@ public:
         ROS_ERROR("cv_bridge exception: %s", e.what());
         return;
       }
-      cv_ptr->image.convertTo(cv_ptr->image, CV_8U, 255.0 / 4096.0);
       save_image(img->header.stamp.toNSec(), cv_ptr->image); 
     }
 
